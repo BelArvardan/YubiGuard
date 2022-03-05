@@ -398,7 +398,7 @@ if __name__ == "__main__":
         context = zmq.Context()
         zmq_socket = context.socket(zmq.PUSH)
         zmq_socket.connect(URL)
-        zmq_socket.send(ON_SIGNAL)
+        zmq_socket.send_string(ON_SIGNAL)
 
     elif args.l is None:
         print("Starting YubiGuard in screen lock mode.")
